@@ -795,36 +795,54 @@ ROUND(tap_in_home_broken / (tap_in_home_broken + tap_in_home) *
 FROM
 town_aggregated_water_access;
 
+```
+## Findings from Analysis
+
+These are the findings uncovered
+
+1. Most water sources are rural in Maji Ndogo.
+2. 43% of our people are using shared taps. 2000 people often share one tap.
+3. 31% of our population has water infrastructure in their homes, but within that group,
+4. 45% face non-functional systems due to issues with pipes, pumps, and reservoirs. Towns like Amina, the rural parts of Amanzi, and a couple
+of towns across Akatsi and Hawassa have broken infrastructure.
+5. 18% of our people are using wells of which, but within that, only 28% are clean. These are mostly in Hawassa, Kilimani and Akatsi.
+6. Our citizens often face long wait times for water, averaging more than 120 minutes:
+• Queues are very long on Saturdays.
+• Queues are longer in the mornings and evenings.
+• Wednesdays and Sundays have the shortest queues.
+
+## Action Plan
+
+We want to focus our efforts on improving the water sources that affect the most people.
+• Most people will benefit if shared taps are improved first.
+2. Wells are a good source of water, but many are contaminated. Fixing this will benefit a lot of people.
+3. Fixing existing infrastructure will benefit a lot of people. If they have running water again, they won't have to queue, thereby shorting queue times
+for others. 
+4. Installing taps in homes will stretch  resources too thin, so for now if the queue times are low, no need to improve that source.
+5. Most water sources are in rural areas. We need to ensure our teams know this as this means they will have to make these repairs/upgrades in
+rural areas where road conditions, supplies, and labour are harder challenges to overcome.
+
+## Monitoring the progress of improvement
+
+We created a new table on sql to monitor the progress of improvement as follows:
+
+```sql
+
 CREATE TABLE Project_progress (
 Project_id SERIAL PRIMARY KEY,
-/* Project_id −− Unique key for sources in case we visit the same
-
-source more than once in the future.
-
-*/
 source_id VARCHAR(20) NOT NULL REFERENCES water_source(source_id) ON DELETE CASCADE ON UPDATE CASCADE,
-/* source_id −− Each of the sources we want to improve should exist,
-
-and should refer to the source table. This ensures data integrity.
-
-*/
 Address VARCHAR(50), -- Street address
 Town_name VARCHAR(30),
 Province_name VARCHAR(30),
 type_of_water_source VARCHAR(50),
-Improvement VARCHAR(50), -- What the engineers should do at that place
+Improvement VARCHAR(50), 
 Source_status VARCHAR(50) DEFAULT 'Backlog' CHECK (Source_status IN ('Backlog', 'In progress', 'Complete')),
-/* Source_status −− We want to limit the type of information engineers can give us, so we
-limit Source_status.
-− By DEFAULT all projects are in the "Backlog" which is like a TODO list.
-− CHECK() ensures only those three options will be accepted. This helps to maintain clean data.
-*/
 Date_of_completion DATE, -- Engineers will add this the day the source has been upgraded.
 Comments TEXT -- Engineers can leave comments. We use a TEXT type that has no limit on char length
 );
 
 -- Project progress query 
--- water sources to be improved
+-- This is to show water sources to be improved
 SELECT
 	location.address,
 	location.town_name,
@@ -848,8 +866,7 @@ OR type_of_water_source IN ('tap_in_home_broken','river')
 OR (type_of_water_source = 'shared_tap' AND time_in_queue > 30)
 );
 
-# Improvement table
-
+# Inserting information into the project progress table, Improvement column
 INSERT INTO project_progress (source_id, Improvement, type_of_water_source)
 SELECT
     wp.source_id,
@@ -868,20 +885,4 @@ LEFT JOIN
 WHERE
     (wp.results IN ('Contaminated: Biological', 'Contaminated: Chemical'))
     OR (ws.type_of_water_source = 'river');
-
-
 ```
-## Findings from Analysis
-
-These are the findings uncovered
-
-1. Most water sources are rural in Maji Ndogo.
-2. 43% of our people are using shared taps. 2000 people often share one tap.
-3. 31% of our population has water infrastructure in their homes, but within that group,
-4. 45% face non-functional systems due to issues with pipes, pumps, and reservoirs. Towns like Amina, the rural parts of Amanzi, and a couple
-of towns across Akatsi and Hawassa have broken infrastructure.
-5. 18% of our people are using wells of which, but within that, only 28% are clean. These are mostly in Hawassa, Kilimani and Akatsi.
-6. Our citizens often face long wait times for water, averaging more than 120 minutes:
-• Queues are very long on Saturdays.
-• Queues are longer in the mornings and evenings.
-• Wednesdays and Sundays have the shortest queues.
