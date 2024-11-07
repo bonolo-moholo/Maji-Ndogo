@@ -1,4 +1,15 @@
 # Maji Ndogo
+
+## Table of contents
+
+- [Project Overview](#project-overview)
+- [Tools](#tools)
+- [Data Cleaning and Preparation](#data-cleaning-and-preparation)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Data Analysis](#data-analysis)
+- [Findings](#findings)
+- [Action Plan](#action-plan)
+- [References](#references)
 ## Project Overview
 The project ia about using Data analysis to address water crisis in a Country called Maji Ndogo. Data was generated using AI for the purpose of this project to mirror real life
 challenges .This data was about the state of water sources across Maji Ndogo, how water is collected, gender parity involved in accessing water, the criminal activities involved in 
@@ -10,7 +21,7 @@ water collection and how everyone is affected. The data was then analysed and in
 - SQL Sever (Data Analysis)
 - PowerBI (Data Visualization and Creating a Report)
 
-### Data Cleaning/Preparation
+### Data Cleaning and Preparation
 
 In the initial phase of data cleaning we performed the following tasks:
 - We imported/loaded the data, inspected it and split it correctly
@@ -796,7 +807,7 @@ FROM
 town_aggregated_water_access;
 
 ```
-## Findings from Analysis
+## Findings 
 
 These are the findings uncovered
 
@@ -889,4 +900,5 @@ WHERE
 
 ## References
 
- Alx Africa Institution
+ 1. Alx Africa Data Analytics programme [Apply at: https://www.alxafrica.com/]
+ 2. ChatGT [https://chatgpt.com/]
