@@ -1,4 +1,4 @@
-# Data Analytics
+# Maji Ndogo
 
 # Education
 Data Analytics Alx, Data Science with Python UCT
