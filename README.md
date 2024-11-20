@@ -18,7 +18,7 @@ water collection and how everyone is affected. The data was then analysed and in
 ## Tools
 
 - Google Sheets (Data Cleaning)
-- SQL Sever (Data Analysis)
+- SQL Server (Data Analysis)
 - PowerBI (Data Visualization and Creating a Report)
 
 ### Data Cleaning and Preparation
