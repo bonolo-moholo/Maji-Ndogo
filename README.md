@@ -64,7 +64,7 @@ WHERE subjective_quality_score = 10 AND visit_count = 2; -- insight showsdata ha
 
 These are the findings uncovered
 
-1. Most water sources are rural in Maji Ndogo.
+1. Most water sources are in rural areas in Maji Ndogo.
 2. 43% of our people are using shared taps. 2000 people often share one tap.
 3. 31% of our population has water infrastructure in their homes, but within that group,
 4. 45% face non-functional systems due to issues with pipes, pumps, and reservoirs. Towns like Amina, the rural parts of Amanzi, and a couple
@@ -106,6 +106,18 @@ Comments TEXT -- Engineers can leave comments. We use a TEXT type that has no li
 );
 
 ```
+## Data Visualizations
+
+- Data Visualizations were performend on powerBI and the visual dashboards and DAX calculations are loaded as files.
+- The report includes visualizations of people served per location type(rural/urban), number of broken infrastructure per province, the time it took people to queue for water, crimes related to 
+  queueing for water, the usage of different water sources per province and per town, the composition of queues, the pollution data analysis, the crimes commited, the national and 
+  provincial budget.
+- The insights for these visualizations are as follows:
+  1. Maji Ndogo population is about 28 million and 18 million people live in the rural areas while 10 million people live in the urban areas
+  2. While analysing broken infrastructure per province, Amanzi province showed to have more broken infrastrure than all the other provinces, placing it as top priority in terms of
+     fixing broken infrastructure
+
+
 ## References
 
  1. Alx Africa Data Analytics programme [Apply at: https://www.alxafrica.com/]
