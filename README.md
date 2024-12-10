@@ -114,8 +114,13 @@ Comments TEXT -- Engineers can leave comments. We use a TEXT type that has no li
   provincial budget.
 - The insights for these visualizations are as follows:
   1. Maji Ndogo population is about 28 million and 18 million people live in the rural areas while 10 million people live in the urban areas
-  2. While analysing broken infrastructure per province, Amanzi province showed to have more broken infrastrure than all the other provinces, placing it as top priority in terms of
-     fixing broken infrastructure
+  2. While analysing broken infrastructure per province, Amanzi province showed to have more broken infrastrure than all the other provinces, placing it as top priority in 
+  terms of fixing broken infrastructure
+  3. Analysing the queues shows that during the week queues are longer in the mornings and afternoons, and over the weekend queues stays long throughout the day except for Sundays where queues are ussually shorter. The other insight is that during the week, women collect water the most while men are mostly found queueing for water on weekends the most. Children are also found in these queues as they probably collect water with their mothers.
+  4. There is a linear relationship between queue length and the times it takes to collect water, making the decision to install more taps to shorten queue times a wiser one.
+  5. While analysing the water collection crime related charts, the insights we get is that women are victimised the most when collecting water across different provinces except for Amanzi and the most crimes commited includes: theft, severe assault, public intoxication and vandalism.
+  6. 
+  
 
 
 ## References
