@@ -13,7 +13,7 @@
 ## Project Overview
 The project ia about using Data analysis to address water crisis in a Country called Maji Ndogo. Data was generated using AI for the purpose of this project to mirror real life
 challenges .This data was about the state of water sources across Maji Ndogo, how water is collected, gender parity involved in accessing water, the criminal activities involved in 
-water collection and how everyone is affected. The data was then analysed and insights extracted to inform decisions by relevant stakeholders.
+water collection and how everyone is affected. The data was then analysed using SQL and insights visualized using PowerBI and reported to inform decisions by relevant stakeholders.
 
 ## Tools
 
@@ -65,25 +65,24 @@ WHERE subjective_quality_score = 10 AND visit_count = 2; -- insight showsdata ha
 These are the findings uncovered
 
 1. Most water sources are in rural areas in Maji Ndogo.
-2. 43% of our people are using shared taps. 2000 people often share one tap.
-3. 31% of our population has water infrastructure in their homes, but within that group,
+2. 43% of the people are using shared taps. 2000 people often share one tap.
+3. 31% of the population has water infrastructure in their homes, but within that group,
 4. 45% face non-functional systems due to issues with pipes, pumps, and reservoirs. Towns like Amina, the rural parts of Amanzi, and a couple
 of towns across Akatsi and Hawassa have broken infrastructure.
-5. 18% of our people are using wells of which, but within that, only 28% are clean. These are mostly in Hawassa, Kilimani and Akatsi.
-6. Our citizens often face long wait times for water, averaging more than 120 minutes:
+5. 18% of the people are using wells of which, but within that, only 28% are clean. These are mostly in Hawassa, Kilimani and Akatsi.
+6. The citizens often face long wait times for water, averaging more than 120 minutes:
 • Queues are very long on Saturdays.
 • Queues are longer in the mornings and evenings.
 • Wednesdays and Sundays have the shortest queues.
 
 ## Action Plan
 
-We want to focus our efforts on improving the water sources that affect the most people.
-1. Most people will benefit if shared taps are improved first.
-2. Wells are a good source of water, but many are contaminated. Fixing this will benefit a lot of people.
-3. Fixing existing infrastructure will benefit a lot of people. If they have running water again, they won't have to queue, thereby shorting queue times
-for others. 
-4. Installing taps in homes will stretch  resources too thin, so for now if the queue times are low, no need to improve that source.
-5. Most water sources are in rural areas. We need to ensure our teams know this as this means they will have to make these repairs/upgrades in
+The plan is to focus on improving the water sources that affect the most people.
+1. Shared taps need to be improved first.
+2. Wells are a good source of water, but many are contaminated. Contaminated wells will have filters installed and new wells will be drilled 
+3. Existing infrastructure will be fixed as this will decrease queue times.
+4. Fixing broken taps at home is not a high priority and will therefore not be done now.
+5. Most water sources are in rural areas. The teams need to know this as this means they will have to make these repairs/upgrades in
 rural areas where road conditions, supplies, and labour are harder challenges to overcome.
 
 ## Monitoring the progress of improvement
@@ -114,13 +113,13 @@ Comments TEXT -- Engineers can leave comments. We use a TEXT type that has no li
   provincial budget.
 - The insights for these visualizations are as follows:
   1. Maji Ndogo population is about 28 million and 18 million people live in the rural areas while 10 million people live in the urban areas
-  2. While analysing broken infrastructure per province, Amanzi province showed to have more broken infrastrure than all the other provinces, placing it as top priority in 
-  terms of fixing broken infrastructure
-  3. Analysing the queues shows that during the week queues are longer in the mornings and afternoons, and over the weekend queues stays long throughout the day except for Sundays where queues are ussually shorter. The other insight is that during the week, women collect water the most while men are mostly found queueing for water on weekends the most. Children are also found in these queues as they probably collect water with their mothers.
-  4. There is a linear relationship between queue length and the times it takes to collect water, making the decision to install more taps to shorten queue times a wiser one.
-  5. While analysing the water collection crime related charts, the insights we get is that women are victimised the most when collecting water across different provinces except for Amanzi and the most crimes commited includes: theft, severe assault, public intoxication and vandalism.
-  6. 
-  
+  2. Analysing the queues shows that during the week queues are longer in the mornings and afternoons as we have seen using SQL, and over the weekend queues stays long throughout the day except for Sundays where queues are usually shorter. The other insight is that during the week, women collect water the most while men are mostly found queueing for water on weekends the most. Children are also found in these queues as they probably collect water with their mothers.
+  3. While analysing the water collection crime related charts, the insights we get is that women are most likely to be victimized than men when collecting water, and this happens across all different provinces except for Amanzi and the most crimes commited against women include harassment and sexual assault
+  4. The map and a pie chart was used to show analysis of the pollution data per province, thus selecting a province on the map shows its pollution percentage on the pie chart. The water sources(wells) in provinces are 41% polluted by chemicals, and 31% biologically contaminated while 28% clean.
+  5. The estimated budget to fix water access related issues nationally, including: installing filters for wells, repairing infrustructer, drilling wells and installing new taps is about $147 million and the distribution for each province is shown on the chart below, only 34% of people have access to water.
+
+
+![pic 4](https://github.com/user-attachments/assets/5526f740-47d5-41cb-a670-1ea1cde5b8af)
 
 
 ## References
